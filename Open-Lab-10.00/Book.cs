@@ -8,7 +8,7 @@ namespace Open_Lab_10._00
 {
     public class Book
     {
-        //Premenné sting
+        //Premenné stRing
         public string title = "rr";
 
         //Premenné int
