@@ -9,10 +9,10 @@ namespace Open_Lab_10._00
     public class Book
     {
         //Premenné string
-        public string title = "rr";
+        public string title;
 
         //Premenné int
-        private int pages = 5;
+        private int pages;
         
         //Metóda ktorá vypíše všetky premenné
         public void WriteAll() 
