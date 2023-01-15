@@ -10,7 +10,12 @@ namespace Open_Lab_10._00
     {
         static void Main(string[] args)
         {
-            Console.WriteLine();
+            //Nový objekt LOTR z triedy Book
+            Book LOTR = new Book();
+
+            //Vypíše všetky premenné z triedy Book
+            LOTR.WriteAll();
+            Console.ReadKey();
         }
     }
 }
