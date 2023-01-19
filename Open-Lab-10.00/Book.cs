@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -17,32 +18,56 @@ namespace Open_Lab_10._00
         private int pages;
         private int releaseDate;
 
-        //Metódy string na ukladanie údajov
-        public void Title(string title) 
+        //Všetky vlastnosti premenných
+        public string Title
         {
-            this.title = title;
+            set { this.title = value; }
+            get { return title; }
         }
 
-        public void Category(string category)
+        public string Category
         {
-            this.category = category;
+            set { this.category = value; }
+            get { return category; }
         }
 
-        public void Author(string author)
+        public string Author
         {
-            this.author = author;
+            set { this.author = value; }
+            get { return author; }
+        }
+        public int Pages
+        {           
+            get { return pages; }
+            set { 
+                    if(pages < 0) 
+                    {
+                        pages = 1;              
+                    }
+
+                    else
+                    {
+                       pages = value;
+                    }
+            }
         }
 
-        //Metódy int na ukladanie údajov 
-        public void Pages(int pages)
+        public int ReleaseDate
         {
-            this.pages = pages;
+            get { return releaseDate; }
+            set {
+                    if(releaseDate >= 1450 && releaseDate <= 2021) 
+                    {
+                        releaseDate = -1;
+                    }
+
+                    else 
+                    {
+                        releaseDate = value;
+                    }
+            }
         }
 
-        public void ReleaseDate(int releaseDate) 
-        {
-            this.releaseDate = releaseDate;
-        }
 
         //Metóda ktorá vypíše všetky premenné
         public void WriteAll() 
