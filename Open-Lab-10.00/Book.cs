@@ -1,82 +1,25 @@
-﻿using System;
+using Open_Lab_10._02;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Open_Lab_10._00
+namespace Open_Lab_10._02
 {
-    public class Book
+    internal class Program
     {
-        //Premenné stRing
-        private string title;
-        private string category;
-        private string author;
-
-        //Premenné int
-        private int pages;
-        private int releaseDate;
-
-        //Všetky vlastnosti premenných
-        public string Title
+        static void Main(string[] args)
         {
-            set { this.title = value; }
-            get { return title; }
-        }
+            Book LOTR = new Book();
+            
+            LOTR.Title("title: Lord Of The Rings");
+            LOTR.Pages(1172);
+            LOTR.Category("category: epic high-fantasy novel");
+            LOTR.Author("author: J. R. R. Tolkien");
+            LOTR.RelaseDate("relase date: 29. July 1954");
+            LOTR.Vypis();
 
-        public string Category
-        {
-            set { this.category = value; }
-            get { return category; }
-        }
-
-        public string Author
-        {
-            set { this.author = value; }
-            get { return author; }
-        }
-        public int Pages
-        {           
-            get { return pages; }
-            set { 
-                    if(pages < 0) 
-                    {
-                        pages = 1;              
-                    }
-
-                    else
-                    {
-                       pages = value;
-                    }
-            }
-        }
-
-        public int ReleaseDate
-        {
-            get { return releaseDate; }
-            set {
-                    if(releaseDate >= 1450 && releaseDate <= 2021) 
-                    {
-                        releaseDate = -1;
-                    }
-
-                    else 
-                    {
-                        releaseDate = value;
-                    }
-            }
-        }
-
-
-        //Metóda ktorá vypíše všetky premenné
-        public void WriteAll() 
-        {
-            Console.WriteLine(title);
-            Console.WriteLine(category);
-            Console.WriteLine(author);
-            Console.WriteLine(pages);
-            Console.WriteLine(releaseDate);            
         }
     }
 }
