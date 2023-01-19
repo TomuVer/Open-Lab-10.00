@@ -10,25 +10,18 @@ namespace Open_Lab_10._00
     {
         static void Main(string[] args)
         {
-            //Nový objekt LOTR z triedy Book
-            Book LOTR = new Book();
+            //Nový objekty z triedy Book
+            Book LOTR2 = new Book();
+            Book LOTR3 = new Book("Ondrejove Dobrodružstvá", 120);
+            Book HOBBIT = new Book("Ondrejove Dobrodružstvá", "Ondrej Barčišiak", "BioGrafia", 120, 2021);
 
             //.
-            LOTR.Title = "Ondrejove Dobrodružstvá";
-            LOTR.Author = "Ondrej Barčišiak";
-            LOTR.Category = "BioGrafia";
+            LOTR2.WriteAll();
+            LOTR3.WriteAll();
+            HOBBIT.WriteAll();
 
-            LOTR.Pages = 120;
-            LOTR.ReleaseDate = 2021;
-
-            //Vypíše všetky premenné z triedy Book
-            Console.WriteLine(LOTR.Title);
-            Console.WriteLine(LOTR.Author);
-            Console.WriteLine(LOTR.Category);
-
-            Console.WriteLine(LOTR.Pages);
-            Console.WriteLine(LOTR.ReleaseDate);
+            //.
             Console.ReadKey();
-        }
+        } 
     }
 }

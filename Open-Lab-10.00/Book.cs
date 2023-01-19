@@ -18,6 +18,38 @@ namespace Open_Lab_10._00
         private int pages;
         private int releaseDate;
 
+        public Book() 
+        {
+            this.title = "-1";
+            this.author = "-1";
+            this.category = "-1";
+
+            this.pages = -1;
+            this.releaseDate = -1;
+        }
+
+        public Book(string title, int pages)
+        {
+            this.title= title;
+            this.pages = pages;
+
+            this.author = "-1";
+            this.category = "-1";
+
+            this.releaseDate = -1;
+        }
+
+        public Book(string title, string author, string category, int pages, int releaseDate)
+        {
+            this.author= author;
+            this.title= title;
+            this.category= category;
+
+            this.releaseDate = releaseDate;
+            this.pages = pages;           
+        }
+
+
         //Všetky vlastnosti premenných
         public string Title
         {
